@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelText Editor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap">
+</head>
+<body>
+    <header>
+        <div class="toolbar2">
+            <button onclick="saveFile()">Save</button>
+            
+            <input type="file" id="fileInput" style="display:none;" onchange="loadFile(event)">
+            <button onclick="document.getElementById('fileInput').click()">Load</button>
+        </div>
+    </header>
+<main class="flex-center">
+    <div class="toolbar">
+        <select id="fontSelector" onchange="changeFont()">
+            <option value="'VT323', sans-serif">VT323</option>
+            <option value="Arial, sans-serif">Arial</option>
+            <option value="'Roboto', sans-serif">Roboto</option>
+            <option value="'Open Sans', sans-serif">Open Sans</option>
+            
+           
+        </select>
+        <button onclick="execCmd('bold')"><b>Bold</b></button>
+        <button onclick="execCmd('italic')"><i>Italic</i></button>
+        <button onclick="execCmd('underline')"><u>Underline</u></button>
+        <button onclick="execCmd('insertUnorderedList')">List</button>
+        <button onclick="execCmd('insertOrderedList')">List Numbered</button>
+        <input type="number" id="fontSizeInput" placeholder="Size (px)" oninput="changeFontSize()">
+
+    </div>
+    <div id="editor" contenteditable="true" 
+    ondragenter="handleDragEnter(event)" 
+    ondragover="handleDragOver(event)"
+    ondragleave="handleDragLeave(event)"
+    ondrop="handleDrop(event)"></div>
+    <div class="flex-row">
+        <span id="wordCount">Words: 0</span>
+        <span id="charCount">Characters: 0</span>
+        <span id="paragraphCount">Paragraph: 0</span>
+    </div>
+    <script src="script.js"></script>
+</main>
+</body>
+</html>
