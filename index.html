@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&display=swap">
-    <link rel="icon" href="https://vavaquin.github.io/Index/images/srime.gif" type="image/gif">
 </head>
 <body>
     <header>
@@ -32,7 +31,6 @@
         <button onclick="execCmd('italic')"><i>Italic</i></button>
         <button onclick="execCmd('underline')"><u>Underline</u></button>
         <button onclick="execCmd('insertUnorderedList')">List</button>
-        <button onclick="execCmd('insertOrderedList')">List Numbered</button>
         <input type="number" id="fontSizeInput" placeholder="Size (px)" oninput="changeFontSize()">
 
     </div>
@@ -46,7 +44,11 @@
         <span id="charCount">Characters: 0</span>
         <span id="paragraphCount">Paragraph: 0</span>
     </div>
+    <div class="image-container" id="imageContainer">
+        <div class="speech-bubble" id="speechBubble"></div>
+    </div>
     <script src="script.js"></script>
+    <script src="slime.js"></script>
 </main>
 </body>
 </html>

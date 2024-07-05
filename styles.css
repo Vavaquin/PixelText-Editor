@@ -48,38 +48,58 @@ body{
 }
 
 .toolbar2 button {
+    background: 
+        url('buttonb3.png') right center no-repeat,
+        url('buttonb1.png') left center no-repeat;
+        
+      /* Define o tamanho das imagens de fundo, se necessário */
+      background-size: auto, auto;
+      image-rendering: pixelated;
 
     margin: 0 2px;
     padding: 10px;
     border: none;
-    background-color: #625565;
+    position: relative;
+    top: 5px;
+    background-color: #2e222f;
     cursor: pointer;
     transition: background-color 0.3s;
     color: #b9adc2;
     border-radius: 0px;
+    transition: all 500ms;
     
 }
 
 .toolbar2 button:hover {
     background-color: #78657c;
     color: #f2ebf8;
+    transform: scale(1.1);
 }
 
 
 .toolbar button {
+    background: 
+    url('buttonb3.png') right center no-repeat,
+    url('buttonb1.png') left center no-repeat;
+    
+  /* Define o tamanho das imagens de fundo, se necessário */
+  background-size: auto, auto;
+  image-rendering: pixelated;
 
     margin: 0 2px;
     padding: 10px;
     border: none;
-    background-color: #625565;
+    background-color: #2e222f;
     cursor: pointer;
     transition: background-color 0.3s;
     color: #b9adc2;
+    transition: all 500ms;
 }
 
 .toolbar button:hover {
     background-color: #78657c;
     color: #f2ebf8;
+    transform: scale(1.1);
 }
 
 
@@ -106,12 +126,14 @@ body{
 
 
 #fontSelector{
+    
     background-color: #181319;
     color: #ccc;
     border-bottom: 2px solid #78657c;
     border-right: 2px #78657c;
     border-top: #181319;
     border-left: #181319;
+    
 }
 
 
@@ -119,3 +141,49 @@ span{
     margin: 0 20px;
     color: #78657c;
 }
+
+
+
+
+.image-container {
+    position: absolute;
+    top: 80%;
+    right: 2%;
+    width: 100px;
+    height: 100px;
+    background-image: url('emoterSlimer1221teaaaaaaaaaaast111.gif');
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+  }
+  
+  .speech-bubble {
+    position: absolute;
+    bottom: 110%;
+    color: #000;
+    left: 0%;
+    transform: translateX(-50%);
+    width: 200px;
+    padding: 10px;
+    background-color: #ab947a;
+    border: 2px solid #000;
+    border-radius: 10px;
+    display: none;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 75%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: #ab947a;
+    border-bottom: 0;
+    margin-left: -10px;
+    margin-bottom: -10px;
+  }
