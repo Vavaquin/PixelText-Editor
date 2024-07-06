@@ -51,10 +51,15 @@ function loadFile(event) {
 
 function changeFont() {
     const font = document.getElementById('fontSelector').value;
+    const editor = document.getElementById('editor');
+    const divs = editor.getElementsByTagName('div');
+
     document.getElementById('editor').style.fontFamily = font;
+
+    for (let div of divs) {
+        div.style.fontFamily = font;
+    }
 }
-
-
 
 
 // autosave
